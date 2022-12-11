@@ -1,9 +1,6 @@
-from copy import copy
-
 from apriltags_eth import make_default_detector
-import cv2
 import numpy as np
-import yaml
+
 
 
 class ApriltagDetector:
@@ -23,7 +20,3 @@ class ApriltagDetector:
             id_list = []
         return corner_list_of_tag_list, id_list
 
-
-if __name__ == "__main__":
-    apriltag_detector = ApriltagDetector()
-    print("Finished!")
