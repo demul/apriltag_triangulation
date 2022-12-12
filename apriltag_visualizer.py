@@ -8,7 +8,7 @@ class ApriltagVisualizer:
     def __init__(self):
         self.font = cv2.FONT_HERSHEY_SIMPLEX
         self.marker_color = (0, 0, 255)
-        self.marker_radius = 2
+        self.marker_radius = 1
         self.marker_thickness = 2
 
         self.marker_history_color = (255, 0, 0)

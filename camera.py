@@ -4,12 +4,12 @@ import numpy as np
 class Camera:
     def __init__(
         self,
-        camera_name:str,
-        width:int=None,
-        height:int=None,
-        intrinsic:np.ndarray=None,
-        distortion:dict=None,
-        rig_transformation:np.ndarray=None,
+        camera_name: str,
+        width: int = 1280,
+        height: int = 800,
+        intrinsic: np.ndarray = None,
+        distortion: np.ndarray = None,
+        rig_transformation : np.ndarray = None,
     ):
         self.camera_name = camera_name
         self.width = width
@@ -52,7 +52,7 @@ class Camera:
         rig_transformation[:3, :3] = rotation
         rig_transformation[:3, [3]] = translation
         rig_transformation[3, 3] = 1
-        camera = Camera(None, None, None, intrinsic, distortion, rig_transformation)
+        camera = Camera(camera_name=None, intrinsic=intrinsic, distortion=distortion, rig_transformation=rig_transformation)
         return camera
 
     @staticmethod
